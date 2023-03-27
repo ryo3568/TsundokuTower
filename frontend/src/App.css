@@ -1,0 +1,301 @@
+/* ヘッダー
+path: src/components/header.js */
+
+header{
+    background-color: #5FC7D6;
+    height: 140px;
+}
+
+.header-nav-logout{
+    list-style: none;
+    float:right;
+    padding: 20px;
+}
+
+.header-nav-logout li {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+li{
+    float:left;
+    padding: 20px;
+
+}
+
+.header-nav-login{
+    float:right;
+    list-style: none;
+   
+}
+
+.allBook {
+    height:80px;
+}
+
+.registerBook {
+    height: 80px;
+}
+
+.account {
+    height: 80px;
+}
+
+.header-logo {
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 100px;
+    float: left;
+}
+
+/* フッター
+path: src/components/footer.js */
+
+footer{
+    height: 90px;
+}
+
+.Tenpensya-logo{
+    height:70px;
+    float:left;
+    padding:10px;
+}
+
+p{
+    border-top: 5px dotted;
+    padding-top: 90px;
+    text-align: center;
+
+}
+
+/* メイン画面　
+path: src/pages/item/main.js */
+
+.bookshelf {
+    height: 500px;
+}
+
+.tsundoku {
+    height: 300px;
+}
+
+.box2 {
+    margin: 2em auto;
+    padding:2em;
+    border: double 5px #5FC7D6;
+    background-color:#EAEBEE;
+}
+
+.content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.object {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectbox-002 {
+    position: relative;
+}
+
+.selectbox-002::before,
+.selectbox-002::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox-002::before {
+    right: 0;
+    display: inline-block;
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 0 3px 3px 0;
+    background-color: #5FC7D6;
+    content: '';
+}
+
+.selectbox-002::after {
+    position: absolute;
+    top: 50%;
+    right: 1.4em;
+    transform: translate(50%, -50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    content: '';
+}
+
+.selectbox-002 select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em 3.6em .4em .8em;
+    border: 2px solid #5FC7D6;
+    border-radius: 3px;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.selectbox-002 select:focus {
+    outline: 1px solid #5FC7D6;
+}
+
+/* ログイン画面
+path: src/pages/user/login.js */
+h1{
+    /* font-size: 25px; */
+    font-family: "游ゴシック体","Yu Gothic","YuGothic",sans-serif;
+    text-align: center;
+}
+
+.login-box{
+    text-align: center;
+    margin:30px;
+}
+    
+
+.login{
+    color:#fff;
+    font-size: 20px;
+    background-color: #5FC7D6;
+    border-color:#5FC7D6;
+    border-radius:5px;
+    margin:20px;
+    width: 150px;
+    height: 50px;
+}
+
+.login-text{
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    display: block;
+    margin:auto;
+}
+
+
+
+.login-text:focus{
+    outline: 0;
+    box-shadow: 0 0 0 2px #5FC7D6 inset;
+}
+
+
+/* 新規登録画面
+path: src/pages/user/register.js */
+
+.register-box{
+    text-align: center;
+    margin:30px;
+}
+
+.register{
+    color:#fff;
+    font-size: 20px;
+    background-color: #5FC7D6;
+    border-color:#5FC7D6;
+    border-radius:5px;
+    margin:20px;
+    width: 150px;
+    height: 50px;
+
+}
+
+.register-text{
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    display: block;
+    margin:auto;
+}
+
+.register-text:focus{
+    outline: 0;
+    box-shadow: 0 0 0 2px #5FC7D6 inset;
+
+}
+
+
+/* 蔵書一覧画面
+path: src/pages/item/readAll.js */
+
+.books{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content:flex-start;
+    text-align: center;
+}
+
+.books-img{
+    margin: 20px;
+    height: 200px;
+    text-align: center;
+}
+
+.border {
+    border-top: 3px solid gray;
+}
+
+/* 積読本一覧画面
+path: src/pages/item/readUnread.js */
+
+/* 読了本一覧画面
+path: src/pages/item/readFinished.js */
+
+/* 本の登録画面
+path: src/pages/item/create.js */
+
+.candidate {
+    height: 200px;
+}
+
+.h1-create{
+    text-align: center;
+    margin:30px;
+}
+
+.create-box{
+    text-align: center;
+    margin:30px;
+}
+
+.search{
+    color:#fff;
+    font-size: 20px;
+    background-color: #5FC7D6;
+    border-color:#5FC7D6;
+    border-radius:5px;
+    margin:20px;
+    width: 150px;
+    height: 50px;
+}
+
+.create-text{
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    display: block;
+    margin:auto;
+}
+
+
+
+.create-text:focus{
+    outline: 0;
+    box-shadow: 0 0 0 2px #5FC7D6 inset;
+}
+
+
+/* 本の詳細画面
+path: src/pages/item/readSingle.js */
