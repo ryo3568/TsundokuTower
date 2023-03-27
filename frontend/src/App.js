@@ -21,7 +21,7 @@ const App = () => {
 
   useEffect(() => {
     const getAllItems = async() => {
-      const response = await fetch("https://tundoku-tower.onrender.com/item/unread")
+      const response = await fetch("http://localhost:5000/item/unread")
       const jsonResponse = await response.json()
       let pages_sum = 0
       let numbers_sum = 0

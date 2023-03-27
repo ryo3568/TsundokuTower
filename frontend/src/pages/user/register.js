@@ -8,7 +8,7 @@ const Register = () => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         try{
-            const response = await fetch("https://tundoku-tower.onrender.com/user/register", {
+            const response = await fetch("http://localhost:5000/user/register", {
                 method: "POST",
                 headers: {
                     "Accept": "application/json",

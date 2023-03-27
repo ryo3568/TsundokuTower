@@ -10,7 +10,7 @@ const ReadUnread = () => {
         document.title = "Unread Books"
 
         const getUnreadItems = async() => {
-            const response = await fetch("https://tundoku-tower.onrender.com/item/unread")
+            const response = await fetch("http://localhost:5000/item/unread")
             const jsonResponse = await response.json()
             setUnreadItems(jsonResponse)
         }

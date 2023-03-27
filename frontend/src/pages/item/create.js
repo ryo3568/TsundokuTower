@@ -43,7 +43,7 @@ const CreateItem = (props) => {
     const handleSubmit = async(e, item) => {
         e.preventDefault()
         try{
-            const response = await fetch("https://tundoku-tower.onrender.com/item/create", {
+            const response = await fetch("http://localhost:5000/item/create", {
                 method: "POST", 
                 headers: {
                     "Accept": "application/json",
