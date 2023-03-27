@@ -21,7 +21,14 @@ const App = () => {
 
   useEffect(() => {
     const getAllItems = async() => {
-      const response = await fetch("http://localhost:5000/item/unread")
+      const response = await fetch("http://localhost:5000/item/unread", {
+          method: "POST",
+          headers: {
+              "Accept" : "application/json",
+              "Content-Type": "application/json",
+              "authorization": `Bearer ${localStorage.getItem("token")}`
+          }
+      })
       const jsonResponse = await response.json()
       let pages_sum = 0
       let numbers_sum = 0

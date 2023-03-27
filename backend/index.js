@@ -34,6 +34,16 @@ app.get("/item/all", async(req, res) => {
     }
 })
 
+app.post("/item/all", auth, async(req, res) => {
+    try{
+        await connectDB()
+        const allItems = await BookModel.find({email: req.body.email})
+        return res.status(200).json({message: "アイテム読み取り成功(all)", allItems: allItems})
+    }catch(err){
+        return res.status(400).json({message: "アイテム読み取り失敗(all)"})
+    }
+})
+
 // Read Single Item
 app.get("/item/single/:id", async(req, res) => {
     try{
@@ -46,10 +56,20 @@ app.get("/item/single/:id", async(req, res) => {
 })
 
 // Read Unread Books
-app.get("/item/unread", async(req, res) => {
+// app.get("/item/unread", auth, async(req, res) => {
+//     try{
+//         await connectDB()
+//         const unreadItems = await BookModel.find({status: false})
+//         return res.status(200).json({message: "アイテム読み取り成功(unread)", unreadItems: unreadItems})
+//     }catch(err){
+//         return res.status(400).json({message: "アイテム読み取り失敗(unread)"})
+//     }
+// })
+
+app.post("/item/unread", auth, async(req, res) => {
     try{
         await connectDB()
-        const unreadItems = await BookModel.find({status: false})
+        const unreadItems = await BookModel.find({status: false, email: req.body.email})
         return res.status(200).json({message: "アイテム読み取り成功(unread)", unreadItems: unreadItems})
     }catch(err){
         return res.status(400).json({message: "アイテム読み取り失敗(unread)"})
@@ -57,10 +77,20 @@ app.get("/item/unread", async(req, res) => {
 })
 
 // Read Finished Books
-app.get("/item/finished", async(req, res) => {
+// app.get("/item/finished", async(req, res) => {
+//     try{
+//         await connectDB()
+//         const finishedItems = await BookModel.find({status: true})
+//         return res.status(200).json({message: "アイテム読み取り成功(finished)", finishedItems: finishedItems})
+//     }catch(err){
+//         return res.status(400).json({message: "アイテム読み取り失敗(finished)"})
+//     }
+// })
+
+app.post("/item/finished",auth, async(req, res) => {
     try{
         await connectDB()
-        const finishedItems = await BookModel.find({status: true})
+        const finishedItems = await BookModel.find({status: true, email:req.body.email})
         return res.status(200).json({message: "アイテム読み取り成功(finished)", finishedItems: finishedItems})
     }catch(err){
         return res.status(400).json({message: "アイテム読み取り失敗(finished)"})
