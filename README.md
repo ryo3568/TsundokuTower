@@ -1,1 +1,2 @@
 # TsundokuTower
+## 背景
