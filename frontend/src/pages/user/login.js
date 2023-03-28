@@ -10,7 +10,7 @@ const Login = (props) => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         try{
-            const response = await fetch("http://localhost:5000/user/login", {
+            const response = await fetch("https://tsundokutower.onrender.com/user/login", {
                 method: "POST",
                 headers: {
                     "Accept": "application/json",

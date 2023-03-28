@@ -10,10 +10,10 @@ const ReadFinished = () => {
         document.title = "Finished Books"
 
         const getFinishedItems = async() => {
-            // const response = await fetch("http://localhost:5000/item/finished")
+            // const response = await fetch("https://tsundokutower.onrender.com/item/finished")
             // const jsonResponse = await response.json()
             // setFinishedItems(jsonResponse)
-            const response = await fetch("http://localhost:5000/item/finished", {
+            const response = await fetch("https://tsundokutower.onrender.com/item/finished", {
                 method: "POST",
                 headers: {
                     "Accept" : "application/json",
